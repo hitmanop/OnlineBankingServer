@@ -40,3 +40,8 @@ This project is a comprehensive online banking service designed to manage client
 - **REST API**
 - **JWT** for authentication
 - **Swagger/OpenAPI** for API documentation
+
+- ## Unit Testing
+
+Unit testing has not yet been implemented.
+

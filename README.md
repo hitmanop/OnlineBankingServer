@@ -1,38 +1,42 @@
-Online Banking Service
-Overview
-This project is a simple service for online banking operations. It includes functionalities for client management, account operations, money transfers, and interest calculations. The system also provides an unsecured API for client creation and a secure API for money transfers and client information retrieval.
+# Online Banking Service
 
-Features
-Client Management:
+## Overview
 
-Each client has exactly one banking account.
-Clients are created with a name, username, password, date of birth, at least one phone number, and email.
-Account balance cannot be negative.
-Users can add, modify, or delete phone numbers and emails with certain constraints (at least one phone number and email required).
-Account Operations:
+This project is a comprehensive online banking service designed to manage client accounts, perform money transfers, and apply interest to accounts. It includes both unsecured and secured APIs, JWT authentication, and an OpenAPI/Swagger interface for API documentation.
 
-Initial balance is set during account creation.
-Balance increases by 5% every minute but does not exceed 207% of the initial balance.
-Money Transfers:
+## Features
 
-Authenticated users can transfer money between accounts.
-Validations and locks are implemented to ensure data consistency and prevent negative balances.
-Search API:
+- **Client Management**
+  - Each client has a single banking account.
+  - Clients can be created with a name, username, password, date of birth, at least one phone number, and one email.
+  - Account balance is maintained to be non-negative.
+  - Users can manage their phone numbers and emails, with constraints ensuring at least one phone number and one email.
 
-Search clients based on filters: date of birth, phone number, name, and email.
-Pagination is supported.
-Authentication:
+- **Account Operations**
+  - Initial balance is set during client creation.
+  - Balance increases by 5% every minute but caps at 207% of the initial balance.
 
-JWT is used for securing API endpoints.
-Unsecured API for client creation.
-API Documentation:
+- **Money Transfers**
+  - Authenticated users can transfer money between accounts.
+  - Implemented validations and locks to ensure data integrity.
 
-Swagger/OpenAPI is configured for API documentation.
-Technologies
-Java 17
-Spring Boot 3
-MySQL (used instead of PostgreSQL as specified in the original requirements)
-Maven
-REST API
-JWT for authentication
-Swagger/OpenAPI for API documentation
+- **Search API**
+  - Search clients by filters such as date of birth, phone number, name, and email.
+  - Supports pagination for search results.
+
+- **Authentication**
+  - JWT-based authentication for secure API access.
+  - Unsecured API endpoint available for client creation.
+
+- **API Documentation**
+  - Swagger/OpenAPI configured for detailed API documentation.
+
+## Technologies
+
+- **Java 17**
+- **Spring Boot 3**
+- **MySQL** (Note: PostgreSQL was initially specified but MySQL is used)
+- **Maven**
+- **REST API**
+- **JWT** for authentication
+- **Swagger/OpenAPI** for API documentation
